@@ -26,7 +26,10 @@ const StyledBubble = styled(Paper, {
         : theme.palette.text.primary,
     padding: theme.spacing(1.5, 2),
     borderRadius: theme.spacing(2),
-    maxWidth: '70%',
+    maxWidth: isOwnMessage ? '85%' : '85%',
+    [theme.breakpoints.up('sm')]: {
+        maxWidth: '70%',
+    },
     alignSelf: isOwnMessage ? 'flex-end' : 'flex-start',
     marginBottom: theme.spacing(1),
     wordBreak: 'break-word',

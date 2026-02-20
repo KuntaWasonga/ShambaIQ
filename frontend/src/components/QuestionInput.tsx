@@ -64,6 +64,12 @@ export const QuestionInput = ({ onSubmit, disabled }: QuestionInputProps) => {
                         helperText={errors.question?.message}
                         variant="outlined"
                         size="small"
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' && !e.shiftKey) {
+                                e.preventDefault();
+                                handleSubmit(handleFormSubmit)();
+                            }
+                        }}
                         sx={{
                             '& .MuiOutlinedInput-root': {
                                 borderRadius: 3,

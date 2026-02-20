@@ -29,7 +29,7 @@ export const LoadingIndicator = ({
                             width: 8,
                             height: 8,
                             borderRadius: '50%',
-                            bgcolor: 'primary.main',
+                            bgColor: 'primary.main',
                             animation: 'pulse 1.5s ease-in-out infinite',
                             animationDelay: `${dot * 0.2}s`,
                             '@keyframes pulse': {
